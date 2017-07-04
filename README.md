@@ -3,7 +3,7 @@ MaintenanceScreen by Laarranz
 
 Pantalla de mantenimiento para cualquier proyecto.
 
-#Instalación:
+# Instalación:
 
 Habilitamos el repositorio en composer.json
 
@@ -34,7 +34,7 @@ MaintenanceScreen::load(array(
 ));
 ```
 
-#Documentacion
+# Documentacion
 Las siguientes opciones se pueden enviar al load() en un array. Opciones:
 
 ```php 
