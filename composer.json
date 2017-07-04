@@ -1,0 +1,20 @@
+{
+    "name": "laarranz/maintenance-screen",
+    "description": "Manages a maintenance screen",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luis Angel Arranz Peinado",
+            "email": "luis@cantabriacreativa.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.6"
+    },
+    "autoload": {
+	  "psr-4": {
+	      "laarranz\\": "src/"
+	    }
+	}
+}
