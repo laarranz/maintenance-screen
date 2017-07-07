@@ -1,32 +1,20 @@
 MaintenanceScreen
 =====
 
-Pantalla de mantenimiento para cualquier proyecto.
+Maintenance screen for any project in PHP.
 
-# Instalación
-
-Habilitamos el repositorio en composer.json
-
-```json
-"repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/laarranz/maintenance-screen.git"
-        }
-    ]
-```
-Instalamos con composer
+# Installation
 
 ```bash
-composer require laarranz/maintenance-screen:dev-master
+composer require luar/maintenance-screen
 ```
 
-Y listo! Para usarlo en nuestro proyecto basta con incluir lo siguiente en el index.php del website, después de cargar el autoload:
+To use it in your project simply include the following in the index.php of the website:
 
 ```php
 <?php 
 
-use laarranz\MaintenanceScreen;
+use Luar\MaintenanceScreen;
 
 MaintenanceScreen::load(array(
 	'enable' => true,
@@ -34,21 +22,23 @@ MaintenanceScreen::load(array(
 ));
 ```
 
-# Documentación
-Las siguientes opciones se pueden enviar al load() en un array asociativo.
+# Documentation
+The following options can be sent to load() in an associative array.
 
 ```
-'enable' => false, // activa o desactiva la pantalla
-'visible_hosts' => array(
-	'localhost',
-	'192.168.1.33',
-	...
-), // direcciones ip que podrán seguir viendo la web aún estando activo
-'flag' => 'mantenimiento.flag', // opcional. se activa o desactiva en base a la existencia del archivo indicado
-'img_path' => 'maintenance.jpg', // opcional. muestra la imagen indicada
-'title' => 'Titulo del mantenimiento', // opcional. muestra el titulo escrito
-'text' => 'Este sitio se encuentra en testing.', // opcional. Muestra el texto indicado
-'css_path' => 'estilo.css', // opcional. incluye hoja de estilos personalizada
-'bgcolor' => 'black' // opcional. modifica el fondo de la pantalla
+'enable' => false, // enable or disable the screen
 
+// ip addresses that can continue to see the web even though it is active
+'visible_hosts' => array (
+'localhost',
+'192.168.1.33'
+), 
+
+// optionals
+'flag' => 'maintenance.flag', // Is activated or deactivated based on the existence of the indicated file
+'img_path' => 'maintenance.jpg', // Show the indicated image
+'title' => 'Maintenance title', // Show the title written
+'text' => 'This site is in testing.', // Shows the indicated text
+'css_path' => 'style.css', // Includes custom style sheet
+'bgcolor' => 'black' // Modifies the background of the screen
 ```

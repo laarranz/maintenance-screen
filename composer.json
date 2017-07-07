@@ -1,5 +1,5 @@
 {
-    "name": "laarranz/maintenance-screen",
+    "name": "luar/maintenance-screen",
     "description": "Manages a maintenance screen",
     "type": "package",
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
 	  "psr-4": {
-	      "laarranz\\": "src/"
+	      "Luar\\": "src/"
 	    }
 	}
 }

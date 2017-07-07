@@ -1,14 +1,14 @@
 <?php 
 
-namespace laarranz;
+namespace Luar;
 
 class MaintenanceScreen
 {
 	static public function load(array $options) {
 
-		$activo = $options['enable'];
+		$enable = $options['enable'];
 
-		if ($activo) {
+		if ($enable) {
 
 			if (!empty($options['flag'])) {
 				if (!file_exists($options['flag'])) {
@@ -16,7 +16,7 @@ class MaintenanceScreen
 				}
 			}
 
-			$ips_permitidas = $options['visible_hosts'];
+			$visible_hosts = $options['visible_hosts'];
 
 			if (!empty($options['img_path'])) {
 				$path_img = $options['img_path'];
@@ -33,7 +33,7 @@ class MaintenanceScreen
 			if (!empty($options['title'])) {	
 				$title = $options['title'];
 			} else {
-				$title = "Tareas de mantenimiento";
+				$title = "Website in maintenance mode";
 			}
 
 			if (!empty($options['css_path'])) {	
@@ -45,15 +45,15 @@ class MaintenanceScreen
 			if (!empty($options['text'])) {	
 				$text = $options['text'];
 			} else {
-				$text = "La web se encuentra en tareas de mantenimiento, vuelva a intentarlo más tarde.";
+				$text = "The website is under maintenance. Please try again in a few minutes.";
 			}
 			
-			if ($activo && !in_array($_SERVER["HTTP_HOST"], $ips_permitidas)) {
+			if ($enable && !in_array($_SERVER["HTTP_HOST"], $visible_hosts)) {
 				
 				include_once "screen.php";
 				die();
-			} elseif ($activo && in_array($_SERVER["HTTP_HOST"], $ips_permitidas)) {
-				echo "Pantalla de mantenimiento habilitada. HOST: ".$_SERVER["HTTP_HOST"]."<br/>";
+			} elseif ($enable && in_array($_SERVER["HTTP_HOST"], $visible_hosts)) {
+				echo "MAINTENANCE ACTIVE. YOUR HOST: ".$_SERVER["HTTP_HOST"]."<br/>";
 			}
 
 		}
