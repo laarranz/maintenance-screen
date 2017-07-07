@@ -1,13 +1,15 @@
-MaintenanceScreen
-=====
 
-Maintenance screen for any project in PHP.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Documentation](#documentation)
 
-# Installation
+### Installation
 
 ```bash
 composer require luar/maintenance-screen
 ```
+
+### Usage
 
 To use it in your project simply include the following in the index.php of the website:
 
@@ -22,7 +24,7 @@ MaintenanceScreen::load(array(
 ));
 ```
 
-# Documentation
+### Documentation
 The following options can be sent to load() in an associative array.
 
 ```
