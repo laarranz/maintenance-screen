@@ -1,4 +1,6 @@
 
+# MaintenanceScreen
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [Documentation](#documentation)
@@ -14,8 +16,6 @@ composer require luar/maintenance-screen
 To use it in your project simply include the following in the index.php of the website:
 
 ```php
-<?php 
-
 use Luar\MaintenanceScreen;
 
 MaintenanceScreen::load(array(
@@ -27,17 +27,17 @@ MaintenanceScreen::load(array(
 ### Documentation
 The following options can be sent to load() in an associative array.
 
-```
+```php
 'enable' => false, // enable or disable the screen
 
 // ip addresses that can continue to see the web even though it is active
 'visible_hosts' => array (
-'localhost',
-'192.168.1.33'
+    'localhost',
+    '192.168.1.33'
 ), 
 
 // optionals
-'flag' => 'maintenance.flag', // Is activated or deactivated based on the existence of the indicated file
+'flag' => 'maintenance.flag', // Activated or deactivated based on the existence of file
 'img_path' => 'maintenance.jpg', // Show the indicated image
 'title' => 'Maintenance title', // Show the title written
 'text' => 'This site is in testing.', // Shows the indicated text
