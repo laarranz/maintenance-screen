@@ -1,6 +1,8 @@
 
 # MaintenanceScreen
 
+This package allows you to enable a maintenance screen for your website.
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [Documentation](#documentation)
