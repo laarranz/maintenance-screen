@@ -5,9 +5,9 @@ namespace Luar;
 class Language
 {
 
-    public $language = 'EN';
+    public $language;
 
-    public function __construct( $language )
+    public function __construct( $language  = 'EN')
     {
         $this->language = $language;
     }
