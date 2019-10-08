@@ -12,7 +12,7 @@ final class MaintenanceScreenTest extends TestCase
             'visible_hosts' => array()
         );
 
-        $maintenance = new MaintenanceScreen();
+        $maintenance = new MaintenanceScreen($options);
 
         $result = $maintenance->processOptions($options);
         $this->assertEquals(0, $result);

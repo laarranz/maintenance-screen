@@ -20,10 +20,12 @@ To use it in your project simply include the following in the index.php of the w
 ```php
 use Luar\MaintenanceScreen;
 
-MaintenanceScreen::load(array(
+$maintenance = new MaintenanceScreen(array(
 	'enable' => true,
 	'visible_hosts' => array()
 ));
+
+$maintenance->load();
 ```
 
 ### Documentation
