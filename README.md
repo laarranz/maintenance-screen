@@ -53,4 +53,5 @@ The following options can be sent to load() in an associative array.
 'text' => 'This site is in testing.', // Shows the indicated text
 'css_path' => 'style.css', // Includes custom style sheet
 'bgcolor' => 'black' // Modifies the background of the screen
+'language' => 'ES' // To change the default language to Spanish
 ```
