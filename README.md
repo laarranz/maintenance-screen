@@ -1,8 +1,8 @@
 
 # MaintenanceScreen
 
-![code-size](https://img.shields.io/github/languages/code-size/laarranz/maintenance-screen)
 ![version](https://img.shields.io/github/v/release/laarranz/maintenance-screen)
+![code-size](https://img.shields.io/github/languages/code-size/laarranz/maintenance-screen)
 ![code](https://img.shields.io/github/languages/top/laarranz/maintenance-screen)
 ![license](https://img.shields.io/github/license/laarranz/maintenance-screen)
 ![packagist downloads](https://img.shields.io/packagist/dt/luar/maintenance-screen)
